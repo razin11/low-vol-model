@@ -24,7 +24,7 @@ con = pdblp.BCon(debug = False, port = 8194, timeout = 50000)
 con.start()
 
 # Uncomment the change directory when you are directly running the script and comment out when importing the script for another program
-cd T:\Razin.Hussain\low_vol_global_equity
+cd "path to the folder that contains the sqlite3 database"
 
 conn = sqlite3.connect("msci_world.sqlite3")
 cur = conn.cursor()
