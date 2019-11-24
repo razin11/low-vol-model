@@ -6,7 +6,7 @@ Created on Mon Feb 25 07:42:31 2019
 """
 
 # Uncomment the change directory when you are directly running the script and comment out when importing the script for another program
-cd C:\blpapi_cpp\bin
+cd "path to the bloomberg api"
 
 import blpapi
 import pdblp
