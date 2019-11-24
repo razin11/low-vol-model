@@ -2,7 +2,7 @@
 """
 Created on Mon Apr  1 11:17:34 2019
 
-@author: robert.currie
+@author: razin.hussain
 """
 
 import pandas as pd
@@ -16,8 +16,9 @@ import math
 import blpapi
 import pdblp
 
-cd T:\Razin.Hussain\low_vol_global_equity\backtest_results
+cd "path to the master_portfolioreturn.csv file"
 
+# Requires Bloomberg connection
 con = pdblp.BCon(debug = False, port = 8194, timeout = 50000)
 con.start()
 
