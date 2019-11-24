@@ -16,8 +16,9 @@ import math
 import blpapi
 import pdblp
 
-cd H:\low_vol_global_equity\backtest_results
+cd "path to the master_portfolioreturn.csv file"
 
+# Requires connection to Bloomberg
 con = pdblp.BCon(debug = False, port = 8194, timeout = 50000)
 con.start()
 
