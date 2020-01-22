@@ -3,7 +3,7 @@ df["book_to_price_score"] = df["book_to_price_zscore"]*0.025
 """
 Created on Sat Mar 23 11:43:49 2019
 
-@author: robert.curriedf["roic_score"] = df["roic_zscore"]*0.075
+@author: ABMRazin
 
 """
 
