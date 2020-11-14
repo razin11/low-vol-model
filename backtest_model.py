@@ -26,13 +26,13 @@ from cvxopt import blas, solvers, matrix
 con = pdblp.BCon(debug = False, port = 8194, timeout = 50000)
 con.start()
 
-conn = mdb.connect(host = "localhost", user = "root", passwd = "delta1")
+conn = mdb.connect(host = "#hostname", user = "#username", passwd = "#password")
 cur = conn.cursor()
 
-cur.execute("USE msci_world")
-engine = create_engine("mysql+pymysql://root: delta1@localhost: 3306/msci_world")
+cur.execute("USE #databasename")
+engine = create_engine("mysql+pymysql://#username: #password@#hostname: 3306/#databasename")
 
-cd T:\Razin.Hussain\low_vol_global_equity
+cd #setpath
 
 #query = '''
 #select * from quarterly where price_date = "2004-12-31 00:00:00"
