@@ -110,7 +110,7 @@ def get_data(bb_ticker, period_5yr, cutoff_date):
     
 #    df["dividend_yield"] = df["dividend_yield"].fillna(0)
     
-    # Fetch from certain items from the locally hosted database
+    # Fetch for certain items from the locally hosted database
     cur.execute('select id, name, sector, country, weight, currency, exchange from symbol where bb_ticker = ?', (bb_ticker,))
     # Puts the fetched items in a tuple
     fetch = cur.fetchone()
@@ -145,7 +145,7 @@ def get_data(bb_ticker, period_5yr, cutoff_date):
     currency = [currency for i in range(len(df))]
     df["currency"] = currency
 
-    # Get exchange for companies from the tuple, make a list and put it in the df
+    # Get exchange name for companies from the tuple, make a list and put it in the df
     exchange = fetch[6]
     exchange = [exchange for i in range(len(df))]
     df["exchange"] = exchange
@@ -245,7 +245,7 @@ def z_score(period_5yr, cutoff_date, rebalancing_term):
 #    
     return df
 
-# Pick top 10% company from every sector 
+# Pick top 6.5% companies from every sector 
 def basket(period_5yr, cutoff_date, rebalancing_term):
     df = z_score(period_5yr, cutoff_date, rebalancing_term)
     
